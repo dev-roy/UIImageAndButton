@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIImageAndButton" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RBl-wp-YJd">
+                                <rect key="frame" x="40" y="44" width="334" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="90" id="Nn3-Zi-z0y" customClass="ImageCell" customModule="UIImageAndButton" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="334" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nn3-Zi-z0y" id="42t-tK-wQh">
+                                            <rect key="frame" x="0.0" y="0.0" width="334" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="command" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Dt8-ZE-gMv">
+                                                    <rect key="frame" x="129.5" y="8.5" width="75" height="73"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="75" id="Ex2-bK-tNc"/>
+                                                        <constraint firstAttribute="height" constant="75" id="UTm-YA-LDI"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Dt8-ZE-gMv" firstAttribute="centerY" secondItem="42t-tK-wQh" secondAttribute="centerY" id="3k6-ht-Zbw"/>
+                                                <constraint firstItem="Dt8-ZE-gMv" firstAttribute="centerX" secondItem="42t-tK-wQh" secondAttribute="centerX" id="3kJ-Ra-G7t"/>
+                                                <constraint firstItem="Dt8-ZE-gMv" firstAttribute="top" secondItem="42t-tK-wQh" secondAttribute="top" constant="7.5" id="OqT-Lf-UxN"/>
+                                                <constraint firstAttribute="bottom" secondItem="Dt8-ZE-gMv" secondAttribute="bottom" constant="7.5" id="uCr-8J-Zlv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellImage" destination="Dt8-ZE-gMv" id="iIu-su-bll"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="acT-NM-ag0"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="kp7-oA-QCE"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RBl-wp-YJd" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="AoR-4A-CUk"/>
+                            <constraint firstItem="RBl-wp-YJd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="PQH-Gg-HiW"/>
+                            <constraint firstAttribute="trailing" secondItem="RBl-wp-YJd" secondAttribute="trailing" constant="40" id="PgP-um-Xo6"/>
+                            <constraint firstItem="RBl-wp-YJd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ur3-JB-LEW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="101.78571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="command" catalog="system" width="64" height="56"/>
+    </resources>
+</document>
